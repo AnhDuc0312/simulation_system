@@ -1,0 +1,15 @@
+DEMO 2
+
+* Files
+	test-args
+
+* Show trace of x86 instructions and updates to registers/memory locations:
+
+	m2s --x86-debug-isa isa test-args
+	vi isa
+
+* Show trace of Linux system calls, with parameters:
+
+	m2s --x86-debug-syscall syscall test-args
+	vi syscall
+

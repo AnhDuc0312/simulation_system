@@ -1,0 +1,28 @@
+DEMO 4
+
+* Files
+
+	mem-config
+	x86-config
+	test-threads
+
+* Show help for memory hierarchy
+
+	m2s --mem-help
+
+* Show configuration files
+
+	vi x86-config
+	vi mem-config
+
+* Run an example on Multi2Sim
+
+	m2s --x86-sim detailed \
+		--x86-config x86-config \
+		--mem-config mem-config \
+		--mem-report report \
+		test-threads 3
+
+	=> Show memory report in 'report'.
+	=> Observe one section per memory module.
+	=> Observe one section per network.

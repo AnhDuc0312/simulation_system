@@ -1,0 +1,46 @@
+DEMO 3
+
+* Files
+
+	test-threads.c
+	x86-config
+
+* Compile sources
+
+	gcc test-threads.c -o test-threads -lpthread
+
+* Run natively and on Multi2Sim
+
+	./test-threads 4
+	m2s test-threads 4
+
+* Run timing simulation on Multi2Sim
+
+	m2s --x86-sim detailed test-threads 4
+
+	-> Observe new variables in [x86] section of statistics summary.
+
+* Run:
+
+	m2s --x86-sim detailed --x86-report report test-threads
+	
+	-> Observe one [Global] section.
+	-> One [c0] section.
+	-> One [c0t0] section.
+
+* Run:
+	
+	m2s --help
+	m2s --x86-help
+	
+	-> Show content of configuration file 'x86-config'
+		[ General ]
+		Cores = 2
+
+
+	m2s --x86-sim detailed --x86-config x86-config --x86-report report test-threads
+
+	-> Observe difference in total number of cycles
+	-> Observe new sections in report file
+	
+

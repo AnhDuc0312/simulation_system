@@ -1,0 +1,30 @@
+DEMO 1
+
+* Files needed:
+	test-args.c
+
+* Run command:
+
+	m2s
+
+* Run command:
+
+	m2s --help
+
+* Compile C source:
+
+	gcc test-args.c -o test-args
+
+* Run 'test-args' natively, with and without arguments.
+
+	./test-args
+	./test-args hello there
+
+* Run 'test-args' on Multi2Sim.
+
+	m2s test-args
+	m2s test-args 2>err
+
+	=> Observe differences between stdout and stderr outputs.
+	=> Observe INI file format in stderr.
+
