@@ -48,4 +48,3 @@ def connectCPUSideBus(self, bus):
 def connectMemSideBus(self, bus):
     self.mem_side = bus.cpu_side_ports
 
-
